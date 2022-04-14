@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{061245C4-6712-406F-8ACD-A263785BBD7D}</ProjectGuid>
+    <ProjectGuid>{309E8EB2-59CB-45C8-93B7-8FF05E592244}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TipAndTrapsOne._01Debugger</RootNamespace>
-    <AssemblyName>TipAndTrapsOne.01Debugger.Tests</AssemblyName>
+    <RootNamespace>TipAndTrapsOne._02</RootNamespace>
+    <AssemblyName>TipAndTrapsOne.02</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;RELEASE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -34,7 +34,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -49,24 +49,18 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebuggerDisplayExampleTests.cs" />
+    <Compile Include="PreprocessorDirectivesExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DebuggerBrowsableAttributeExample.cs" />
-    <Compile Include="NullCoalescingOperatorExample.cs" />
-    <Compile Include="CallerInformationAttribute.cs" />
-    <Compile Include="PartialTypeExample.cs" />
-    <Compile Include="RunTimeConversionExample.cs" />
-    <Compile Include="InternalsExample.cs" />
-    <Compile Include="VirtualMethodCallFromConstrusctor.cs" />
+    <Compile Include="UnicodeValidityExample.cs" />
+    <Compile Include="ChangingThreadCultureExample.cs" />
+    <Compile Include="RandomNumberExamples.cs" />
+    <Compile Include="TuplesExamples.cs" />
+    <Compile Include="ObjectReferenceEqualsExample.cs" />
+    <Compile Include="GeHasCodeDictorionaryExample.cs" />
+    <Compile Include="FlagEnumExamples.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SomeInternalThings\SomeInternalThings.csproj">
-      <Project>{787A79AF-7ABA-4598-9B79-61BE92735387}</Project>
-      <Name>SomeInternalThings</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

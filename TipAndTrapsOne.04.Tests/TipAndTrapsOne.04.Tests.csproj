@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{061245C4-6712-406F-8ACD-A263785BBD7D}</ProjectGuid>
+    <ProjectGuid>{1B318F5E-CA74-4AF9-A71B-6257F24999FB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TipAndTrapsOne._01Debugger</RootNamespace>
-    <AssemblyName>TipAndTrapsOne.01Debugger.Tests</AssemblyName>
+    <RootNamespace>TipAndTrapsOne._04.Tests</RootNamespace>
+    <AssemblyName>TipAndTrapsOne.04.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,24 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebuggerDisplayExampleTests.cs" />
+    <Compile Include="NumberStylesExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DebuggerBrowsableAttributeExample.cs" />
-    <Compile Include="NullCoalescingOperatorExample.cs" />
-    <Compile Include="CallerInformationAttribute.cs" />
-    <Compile Include="PartialTypeExample.cs" />
-    <Compile Include="RunTimeConversionExample.cs" />
-    <Compile Include="InternalsExample.cs" />
-    <Compile Include="VirtualMethodCallFromConstrusctor.cs" />
+    <Compile Include="ParseExactDateTimeExample.cs" />
+    <Compile Include="RoundTripDateTimeParsingExample.cs" />
+    <Compile Include="ConvertingBaseTypesToBinaryExample.cs" />
+    <Compile Include="AsOrCastExample.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SomeInternalThings\SomeInternalThings.csproj">
-      <Project>{787A79AF-7ABA-4598-9B79-61BE92735387}</Project>
-      <Name>SomeInternalThings</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{061245C4-6712-406F-8ACD-A263785BBD7D}</ProjectGuid>
+    <ProjectGuid>{E8DD2F76-1945-4A1F-A8FA-7AFD875BB374}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TipAndTrapsOne._01Debugger</RootNamespace>
-    <AssemblyName>TipAndTrapsOne.01Debugger.Tests</AssemblyName>
+    <RootNamespace>TipAndTrapsOne._05.Tests</RootNamespace>
+    <AssemblyName>TipAndTrapsOne.05.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -26,7 +26,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;LOG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -47,25 +47,37 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebuggerDisplayExampleTests.cs" />
+    <Compile Include="DemoSupportCode\Class1.cs" />
+    <Compile Include="DemoSupportCode\Class2.cs" />
+    <Compile Include="DemoSupportCode\Nested\Class1.cs" />
+    <Compile Include="NamespaceAliasignExample.cs" />
+    <Compile Include="BigIntegerExample.cs" />
+    <Compile Include="CustomFormatExample.cs" />
+    <Compile Include="ConditionalAttributeExample.cs" />
+    <Compile Include="Pathexample.cs" />
+    <Compile Include="FormattingColumnsExample.cs" />
+    <Compile Include="ParamsExample.cs" />
+    <Compile Include="SystemEnvironmentExample.cs" />
+    <Compile Include="IndexerExample.cs" />
+    <Compile Include="YieldExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DebuggerBrowsableAttributeExample.cs" />
-    <Compile Include="NullCoalescingOperatorExample.cs" />
-    <Compile Include="CallerInformationAttribute.cs" />
-    <Compile Include="PartialTypeExample.cs" />
-    <Compile Include="RunTimeConversionExample.cs" />
-    <Compile Include="InternalsExample.cs" />
-    <Compile Include="VirtualMethodCallFromConstrusctor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SomeInternalThings\SomeInternalThings.csproj">
-      <Project>{787A79AF-7ABA-4598-9B79-61BE92735387}</Project>
-      <Name>SomeInternalThings</Name>
+    <ProjectReference Include="..\AssemblyA\AssemblyA.csproj">
+      <Project>{03db74d5-a7ec-4416-a06f-a7607f643070}</Project>
+      <Name>AssemblyA</Name>
+      <Aliases>APeople</Aliases>
+    </ProjectReference>
+    <ProjectReference Include="..\AssemblyB\AssemblyB.csproj">
+      <Project>{ebb4f02d-67ff-429b-9534-64b082886154}</Project>
+      <Name>AssemblyB</Name>
+      <Aliases>BPeople</Aliases>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
